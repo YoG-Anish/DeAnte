@@ -7,13 +7,13 @@
   "apiVersion": 2,
   "keywords": ["cards", "twocolcasestudyslider", "grid", "deante-blocks"],
   "acf": {
-    "mode": "preview",
+    "mode": "auto",
     "renderTemplate": "twocolcasestudyslider.php",
     "postTypes": ["page"]
   },
   "supports": {
     "anchor": true,
-    "mode": false,
+    "mode": true,
     "align": false,
     "multiple": true
   },

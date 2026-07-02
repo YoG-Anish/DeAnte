@@ -7,13 +7,13 @@
   "apiVersion": 2,
   "keywords": ["cards", "twocolimagecontent", "grid", "deante-blocks"],
   "acf": {
-    "mode": "preview",
+    "mode": "auto",
     "renderTemplate": "twocolimagecontent.php",
     "postTypes": ["page"]
   },
   "supports": {
     "anchor": true,
-    "mode": false,
+    "mode": true,
     "align": false,
     "multiple": true
   },
