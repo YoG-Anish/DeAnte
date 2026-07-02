@@ -1,0 +1,142 @@
+/* ===========================
+   CSS VARIABLES
+=========================== */
+@import url("https://fonts.cdnfonts.com/css/ibm-plex-serif");
+@import url("https://fonts.cdnfonts.com/css/dm-sans");
+
+:root {
+  /* Colors */
+  --color-primary: #92d5b2;
+  --color-primary-dark: #31473c;
+  --color-primary-light: #d8f2e4;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-text: #ffffff;
+  --color-text-dark: #00142b;
+
+  --color-background: #00142b;
+  --color-border: #31473c;
+
+  /* Fonts */
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "IBM Plex Serif", sans-serif;
+
+  /* Font Sizes */
+  --fs-xs: 13px;
+  --fs-sm: 14px;
+  --fs-bs: 15px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 28px;
+  --fs-xl: 24px;
+  --fs-2xl: 32px;
+  --fs-3xl: 40px;
+  --fs-4xl: 46px;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Line Height */
+  --lh-normal: 1.6;
+  --lh-heading: 1.4;
+
+  /* Container */
+  --container-width: 1344px;
+  --container-padding: 20px;
+
+  /* Border */
+  --border: 1px solid var(--color-border);
+
+  /* Transition */
+  --transition: 0.3s ease;
+
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-fixed: 1000;
+  --z-modal: 2000;
+}
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+section {
+  padding: 100px 0;
+}
+.container {
+  width: min(100% - calc(2 * var(--container-padding)), var(--container-width));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 80px 0;
+  }
+}
