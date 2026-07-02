@@ -1,10 +1,10 @@
 {
-    "key": "ui_options_page_6a45ed8407967",
-    "title": "Footer",
+    "key": "ui_options_page_6a462366d6f38",
+    "title": "Header",
     "active": true,
     "menu_order": 0,
-    "page_title": "Footer",
-    "menu_slug": "footer",
+    "page_title": "Header",
+    "menu_slug": "header",
     "parent_slug": "theme-settings",
     "advanced_configuration": 0,
     "icon_url": "",
@@ -20,5 +20,5 @@
     "post_id": "",
     "autoload": 0,
     "_parent": 183,
-    "modified": 1782981465
+    "modified": 1782981534
 }

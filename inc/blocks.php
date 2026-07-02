@@ -9,3 +9,13 @@ function register_acf_fields() {
     }
 }
 add_action( 'init', 'register_acf_fields' );
+
+// Register custom block category
+add_filter( 'block_categories_all', function( $categories ) {
+    array_unshift( $categories, [
+        'slug'  => 'deante-blocks',
+        'title' => 'Deante Blocks',
+        'icon'  => null,
+    ]);
+    return $categories;
+});

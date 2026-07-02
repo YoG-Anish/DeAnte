@@ -35,15 +35,7 @@ add_filter('acf/settings/load_json', function ($paths) {
     return $paths;
 });
 
-// Register custom block category
-add_filter( 'block_categories_all', function( $categories ) {
-    array_unshift( $categories, [
-        'slug'  => 'deante-blocks',
-        'title' => 'Deante Blocks',
-        'icon'  => null,
-    ]);
-    return $categories;
-});
+
 
 
 // 1. Allow SVG through the WordPress upload mime types

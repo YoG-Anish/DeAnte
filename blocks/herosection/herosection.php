@@ -24,7 +24,9 @@ if (isset($block['data']['preview_image_help'])) {
 
                 <?php if (!empty($logo)) : ?>
                     <div class="logo-wrapper">
-                        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+                        </a>
                     </div>
                 <?php endif; ?>
 
@@ -46,7 +48,7 @@ if (isset($block['data']['preview_image_help'])) {
                     <span class="icon down-btn">
                         <svg width="23" height="32" viewBox="0 0 23 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.5 0.859131L11.5 30.8591M11.5 30.8591L22 20.7429M11.5 30.8591L1 20.7429"
-                                  stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </span>
                 </div>
