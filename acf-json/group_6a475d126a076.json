@@ -1,16 +1,53 @@
 {
-    "key": "group_6a44e7004665e",
-    "title": "Block : twocolumntitle",
+    "key": "group_6a475d126a076",
+    "title": "CPT : Case Study",
     "fields": [
         {
-            "key": "field_6a44e74eda99e",
-            "label": "HTML Wrapper Class",
-            "name": "",
+            "key": "field_6a475d12f60cb",
+            "label": "Media Type",
+            "name": "media_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yt_video_id": "Youtube Video Id",
+                "mp4_video": "Mp4 File"
+            },
+            "default_value": "Mp4 File",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6a47665871290",
+            "label": "Youtube Id",
+            "name": "youtube_id",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a475d12f60cb",
+                        "operator": "==",
+                        "value": "yt_video_id"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -24,14 +61,22 @@
             "append": ""
         },
         {
-            "key": "field_6a44e700da99b",
-            "label": "Image",
-            "name": "image",
+            "key": "field_6a475dc2a8f60",
+            "label": "Mp4 File",
+            "name": "mp4_file",
             "aria-label": "",
-            "type": "image",
+            "type": "file",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a475d12f60cb",
+                        "operator": "==",
+                        "value": "mp4_video"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -39,20 +84,15 @@
             },
             "return_format": "array",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "allow_in_bindings": 0
         },
         {
-            "key": "field_6a44e722da99c",
-            "label": "Title",
-            "name": "title",
+            "key": "field_6a478263588d5",
+            "label": "Client Name",
+            "name": "client_name",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -71,9 +111,9 @@
             "append": ""
         },
         {
-            "key": "field_6a44e730da99d",
-            "label": "Content",
-            "name": "content",
+            "key": "field_6a4782a0588d6",
+            "label": "Description",
+            "name": "description",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -92,9 +132,9 @@
             "delay": 0
         },
         {
-            "key": "field_6a4752516de06",
-            "label": "Project Details",
-            "name": "project_details",
+            "key": "field_6a4782f0588d7",
+            "label": "Our Role",
+            "name": "our_role",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -114,9 +154,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6a4752a66de07",
-                    "label": "Label",
-                    "name": "label",
+                    "key": "field_6a478323588d8",
+                    "label": "Role Item",
+                    "name": "role_item",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -133,54 +173,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6a4752516de06"
-                },
-                {
-                    "key": "field_6a47532f9dbd1",
-                    "label": "values",
-                    "name": "values",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Row",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_6a4753579dbd2",
-                            "label": "value item",
-                            "name": "value_item",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_6a47532f9dbd1"
-                        }
-                    ],
-                    "parent_repeater": "field_6a4752516de06"
+                    "parent_repeater": "field_6a4782f0588d7"
                 }
             ]
         }
@@ -188,9 +181,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/twocolumntitle"
+                "value": "case-study"
             }
         ]
     ],
@@ -206,5 +199,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783059319
+    "modified": 1783071551
 }

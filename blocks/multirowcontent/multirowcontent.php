@@ -54,7 +54,7 @@ if (isset($block['data']['preview_image_help'])) {
                                                 <?php endif; ?>
                                                 <a class="btn-outline<?php echo !$is_home ? ' btn-outline-full-mobile' : ''; ?>"
                                                    href="<?php echo esc_url($button_link['url']); ?>"
-                                                   target="<?php echo esc_attr($button_link['target'] ?: '_self'); ?>">
+                                                   target="<?php echo esc_attr($button_link['target'] ); ?>">
                                                     <?php echo esc_html($button_link['title']); ?>
                                                 </a>
                                             </p>

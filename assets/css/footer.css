@@ -15,6 +15,7 @@
 .footer-headline {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-3xl);
+	color:var(--color-text-dark);
   letter-spacing: -2%;
   max-width: 540px;
 }

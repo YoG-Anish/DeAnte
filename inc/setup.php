@@ -13,7 +13,8 @@ function register_my_menus() {
     register_nav_menus(
         array(
             'header-menu' => __('Header Menu'),
-            'footer-menu' => __('Footer Menu')
+            'footer-menu-1' => __('Footer Menu 1'),
+            'footer-menu-2' => __('Footer Menu 2'),
         )
     );
 }

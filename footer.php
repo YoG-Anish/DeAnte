@@ -49,47 +49,21 @@
             <!-- Right Column: Navigation and Expertise -->
             <div class="footer-col-right">
 
-                <ul class="footer-nav underline-on-hover-ul">
-                    <?php
-                    wp_nav_menu([
-                        'theme_location' => 'footer-menu',
-                        'container'      => false,
-                        'items_wrap'     => '%3$s',
-                        'fallback_cb'    => false,
-                    ]);
-                    ?>
-                </ul>
-                <?php
-                $expertise_parent = get_page_by_path('expertise');
-                $expertise_items   = [];
+               <?php
+               wp_nav_menu(array(
+                   'theme_location' => 'footer-menu-1',
+                   'menu_class'     => 'footer-nav underline-on-hover-ul',
+                   'fallback_cb'    => false,
+               ));
+               ?>
 
-                if ($expertise_parent) {
-                    $expertise_items = get_pages([
-                        'child_of'    => $expertise_parent->ID,
-                        'sort_column' => 'menu_order',
-                        'sort_order'  => 'ASC',
-                    ]);
-                }
-                ?>
-                <?php if ($expertise_parent) : ?>
-                    <ul class="footer-expertise underline-on-hover-ul">
-                        <li>
-                            <a href="<?php echo esc_url(get_permalink($expertise_parent->ID)); ?>">
-                                <span class="bold-text">Expertise</span>
-                            </a>
-                        </li>
-                        <?php if (!empty($expertise_items)) : ?>
-                            <?php foreach ($expertise_items as $item) : ?>
-                                <li>
-                                    <a href="<?php echo esc_url(get_permalink($item->ID)); ?>">
-                                        / <?php echo esc_html($item->post_title); ?>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </ul>
-                <?php endif; ?>
-
+               <?php
+               wp_nav_menu(array(
+                   'theme_location' => 'footer-menu-2',
+                   'menu_class'     => 'footer-expertise underline-on-hover-ul',
+                   'fallback_cb'    => false,
+               ));
+               ?>
                 <div class="footer-social-actions">
                     <a href="#" class="social-link" aria-label="LinkedIn"><img src="../assets/svg/mdi_linkedin.svg" alt="" /></a>
                     <a href="#top" class="back-to-top" aria-label="Back to top"><img src="../assets/svg/Icon arrow large button.svg" alt="" /></a>

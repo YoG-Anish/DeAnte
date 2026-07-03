@@ -45,6 +45,23 @@
 .highlight {
   color: var(--color-primary);
 }
+
+.h2-margin {
+  margin-bottom: 60px;
+}
+.padding-top-0 {
+  padding-top: 0;
+}
+.padding-bottom-0 {
+  padding-bottom: 0;
+}
+.padding-0 {
+  padding: 0;
+}
+.padding-bottom-120 {
+  padding-bottom: 120px;
+}
+
 @media (max-width: 767px) {
   .btn-outline {
     align-self: auto;

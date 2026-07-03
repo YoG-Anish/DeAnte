@@ -1,13 +1,13 @@
 {
-    "key": "group_6a44cb0487255",
-    "title": "Block: Case Studies",
+    "key": "group_6a4724daebb34",
+    "title": "Option : Header",
     "fields": [
         {
-            "key": "field_6a4787f889c55",
-            "label": "HTML Wrapper Class",
-            "name": "html_wrapper_class",
+            "key": "field_6a47434a8449f",
+            "label": "Header Logo",
+            "name": "header_logo",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,26 +16,31 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "preview_size": "medium"
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "options_page",
                 "operator": "==",
-                "value": "acf\/casestudies-card"
+                "value": "header"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
@@ -45,5 +50,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783072775
+    "modified": 1783055198
 }

@@ -2,8 +2,8 @@
 if (isset($block['data']['preview_image_help'])) {
     echo '<img src="' . get_template_directory_uri() . $block['data']['preview_image_help'] . '" style="width:100%; height:auto;">';
 } else {
-    $title = get_field('title');
-    $items = get_field('items');
+    $title  = get_field('title');
+    $gallery = get_field('image_gallery');
 ?>
     <section class="partners-section <?php echo esc_attr(get_field('html_wrapper_class')); ?>">
         <div class="container">
@@ -12,18 +12,13 @@ if (isset($block['data']['preview_image_help'])) {
             <?php endif; ?>
         </div>
 
-        <?php if (!empty($items)) : ?>
+        <?php if (!empty($gallery)) : ?>
             <div id="partner-slider" class="splide partner-splide" aria-label="Client Partners">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <?php foreach ($items as $item) :
-                            $logo = $item['logo'];
-                            if (empty($logo)) {
-                                continue;
-                            }
-                        ?>
+                        <?php foreach ($gallery as $logo) : ?>
                             <li class="splide__slide partner-slide">
-                                <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?: 'Partner logo'); ?>" />
+                                <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ); ?>" />
                             </li>
                         <?php endforeach; ?>
                     </ul>
