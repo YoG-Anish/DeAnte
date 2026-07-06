@@ -319,15 +319,39 @@
 }
 
 /* Desktop Nav  */
-.site-header.desktop-header {
+ .site-header.desktop-header {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
 }
+
 .site-header.desktop-header .container {
   justify-content: flex-end;
 }
 .site-header.desktop-header .logo {
   display: none;
+}
+
+/* Admin bar wordpress Height */
+.admin-bar .site-header.desktop-header,
+.admin-bar .modal-overlay,
+.admin-bar .sidebar-overlay{
+	top:32px;
+}
+@media(max-width:782px){
+	.admin-bar .site-header.desktop-header,
+	.admin-bar .modal-overlay,
+	.admin-bar .sidebar-overlay {
+		top:46px;
+	}
+}
+/* Sub nav slash */
+.menu-item-has-children .sub-menu li a::before {
+    content: "/";
+    margin-right: 6px; 
+    color: var(--color-text-dark);      
+}
+.menu-item-has-children .sub-menu li:hover a::before {
+    color: var(--color-primary);      
 }

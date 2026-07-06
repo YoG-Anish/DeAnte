@@ -25,7 +25,8 @@ if (isset($block['data']['preview_image_help'])) {
                 <?php if ($initial_query->have_posts()) : ?>
                     <?php while ($initial_query->have_posts()) : $initial_query->the_post(); ?>
                         <?php echo render_case_study_card(get_post()); ?>
-                    <?php endwhile; wp_reset_postdata(); ?>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
 

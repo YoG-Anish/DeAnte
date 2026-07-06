@@ -101,3 +101,12 @@
     flex-direction: column;
   }
 }
+/* Footer Slash */
+#menu-footer-menu-2 li:first-child a {
+    font-weight: 600;
+}
+#menu-footer-menu-2 li:not(:first-child)::before {
+    content: "/";
+    margin-right: 8px; 
+    color: var(--color-text-dark);      
+}

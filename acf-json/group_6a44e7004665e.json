@@ -5,7 +5,7 @@
         {
             "key": "field_6a44e74eda99e",
             "label": "HTML Wrapper Class",
-            "name": "",
+            "name": "html_wrapper_class",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -183,6 +183,32 @@
                     "parent_repeater": "field_6a4752516de06"
                 }
             ]
+        },
+        {
+            "key": "field_6a4b238983d9e",
+            "label": "thumbnail image",
+            "name": "thumbnail_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -206,5 +232,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783059319
+    "modified": 1783314150
 }

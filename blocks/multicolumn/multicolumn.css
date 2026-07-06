@@ -1,5 +1,6 @@
 .expertise-grid {
   display: grid;
+	grid-auto-rows: 1fr; 
 }
 .expertise-grid.grid-4 {
   grid-template-columns: repeat(4, 1fr);

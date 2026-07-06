@@ -5,7 +5,7 @@
   padding-bottom: 0;
 }
 .inner-banner-section.padding-60 {
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 .inner-banner-section .container.split-layout {
   display: flex;
@@ -75,4 +75,17 @@
   .inner-banner-content .project-details .detail-item {
     flex-direction: column;
   }
+}
+/* half bg */
+.bg-half .container img {
+  aspect-ratio: 3.6 / 2.1;
+  border-radius: 10px;
+}
+.bg-half {
+  margin-top: 60px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-background) 50%,
+    var(--color-white) 50%
+  );
 }

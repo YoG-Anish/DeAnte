@@ -9,7 +9,7 @@
   "acf": {
     "mode": "auto",
     "renderTemplate": "partner-logo.php",
-    "postTypes": ["page"]
+    "postTypes": ["page" , "case-study"]
   },
   "supports": {
     "anchor": true,

@@ -21,7 +21,6 @@ add_filter( 'block_categories_all', function( $categories ) {
 });
 
 // functions.php
-
 function render_case_study_card($case) {
     $media_type  = get_field('media_type', $case->ID); // yt / mp4
     $youtube_id  = get_field('youtube_id', $case->ID);
@@ -36,7 +35,7 @@ function render_case_study_card($case) {
 
     ob_start();
     ?>
-    <article class="case-studies-card">
+    <a href="<?php echo esc_url(get_permalink($case->ID)); ?>" class="case-studies-card">
 
         <div class="card-media <?php echo (!$show_youtube && !$show_mp4 && !$show_image) ? 'gray-placeholder' : ''; ?>">
             <?php if ($show_youtube) : ?>
@@ -79,22 +78,21 @@ function render_case_study_card($case) {
             <?php endif; ?>
         </div>
 
-    </article>
+    </a>
     <?php
     return ob_get_clean();
 }
-
 function ajax_filter_case_studies() {
     $filter = isset($_POST['filter']) ? sanitize_text_field($_POST['filter']) : 'all';
 
     $args = [
-        'post_type'      => 'case_study',
+        'post_type'      => 'case-study',
         'posts_per_page' => -1,
     ];
 
     if ($filter !== 'all') {
         $args['tax_query'] = [[
-            'taxonomy' => 'case_study_category',
+            'taxonomy' => 'services-category',
             'field'    => 'slug',
             'terms'    => $filter,
         ]];

@@ -9,7 +9,7 @@
   "acf": {
     "mode": "auto",
     "renderTemplate": "multirowcontent.php",
-    "postTypes": ["page"]
+    "postTypes": ["page" , "case-study"]
   },
   "supports": {
     "anchor": true,

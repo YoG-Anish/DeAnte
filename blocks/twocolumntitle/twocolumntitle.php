@@ -53,7 +53,13 @@ if (isset($block['data']['preview_image_help'])) {
                     </div>
                 <?php endif; ?>
             </div>
-
         </div>
+        <?php if ($thumbnail_image = get_field('thumbnail_image')) : ?>
+            <div class="bg-half ">
+                <div class="container">
+                    <img src="<?php echo esc_url($thumbnail_image['url']); ?>" alt="<?php echo esc_attr($thumbnail_image['alt']); ?>" />
+                </div>
+            </div>
+        <?php endif; ?>
     </section>
 <?php } ?>
