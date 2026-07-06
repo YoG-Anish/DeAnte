@@ -23,7 +23,7 @@ if (isset($block['data']['preview_image_help'])) {
                             <?php endif; ?>
 
                             <?php if (!empty($text)) : ?>
-                                <p class="single-content-text"><?php echo wp_kses_post($text); ?></p>
+                                <div class="single-content-text"><?php echo wp_kses_post($text); ?></div>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>

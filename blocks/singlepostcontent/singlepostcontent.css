@@ -11,10 +11,10 @@
 }
 
 h2.single-content-heading,
-p.single-content-text {
+.single-content-text {
   color: var(--color-text-dark);
 }
-p.single-content-text {
+.single-content-text {
   font-size: var(--fs-mlg);
   margin-top: 24px;
 }

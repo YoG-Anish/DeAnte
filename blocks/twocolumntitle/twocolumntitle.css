@@ -1,5 +1,5 @@
 .inner-banner-section {
-  padding: 120px 0 100px;
+  padding: 100px 0 120px;
 }
 .inner-banner-section.padding-bottom-0 {
   padding-bottom: 0;
@@ -62,6 +62,12 @@
   }
 }
 @media (max-width: 767px) {
+	.inner-banner-section {
+  padding: 80px 0;
+}
+	.inner-banner-section .container.split-layout {
+  gap: 64px;
+}
   .inner-banner-graphic img {
     max-width: 185px;
   }

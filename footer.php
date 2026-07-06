@@ -49,24 +49,46 @@
             <!-- Right Column: Navigation and Expertise -->
             <div class="footer-col-right">
 
-               <?php
-               wp_nav_menu(array(
-                   'theme_location' => 'footer-menu-1',
-                   'menu_class'     => 'footer-nav underline-on-hover-ul',
-                   'fallback_cb'    => false,
-               ));
-               ?>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer-menu-1',
+                    'menu_class'     => 'footer-nav underline-on-hover-ul',
+                    'fallback_cb'    => false,
+                ));
+                ?>
 
-               <?php
-               wp_nav_menu(array(
-                   'theme_location' => 'footer-menu-2',
-                   'menu_class'     => 'footer-expertise underline-on-hover-ul',
-                   'fallback_cb'    => false,
-               ));
-               ?>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer-menu-2',
+                    'menu_class'     => 'footer-expertise underline-on-hover-ul',
+                    'fallback_cb'    => false,
+                ));
+                ?>
+                <?php
+                $social_links = get_field('social_links', 'option');
+                ?>
+
                 <div class="footer-social-actions">
-                    <a href="#" class="social-link" aria-label="LinkedIn"><img src="../assets/svg/mdi_linkedin.svg" alt="" /></a>
-                    <a href="#top" class="back-to-top" aria-label="Back to top"><img src="../assets/svg/Icon arrow large button.svg" alt="" /></a>
+
+                    <?php if (!empty($social_links)) : ?>
+                        <?php foreach ($social_links as $social) :
+                            $icon = $social['icon'];
+                            $link = $social['link'];
+
+                            if (empty($icon) || empty($link)) {
+                                continue;
+                            }
+                        ?>
+                            <a href="<?php echo $link ?>" class="social-link"  target="blank"  >
+                                <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
+                            </a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
+                    <a href="#top" class="back-to-top" aria-label="Back to top">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/uparrow.svg" alt="" />
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -76,8 +98,8 @@
     <section class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-content">
-                <p>Based in Brisbane – doing business everywhere.</p>
-                <p>&copy; 2025 DeAnte. All Rights Reserved.</p>
+                <p><?php bloginfo('description'); ?></p>
+                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
             </div>
         </div>
     </section>

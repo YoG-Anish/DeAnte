@@ -7,9 +7,7 @@ if (isset($block['data']['preview_image_help'])) {
     $grid_type            = get_field('choose_grid_layout'); // grid_3 / grid_4
     $use_small_icon       = get_field('icon_size_and_layout');
     $items                = get_field('items');
-
     $is_grid_3 = $grid_type === 'grid_3';
-
     $grid_class = 'expertise-grid ' . ($is_grid_3 ? 'grid-3' : 'grid-4') . ($use_small_icon ? ' card-princ-40' : '');
 ?>
     <section class="expertise-wrapper <?php echo esc_attr(get_field('html_wrapper_class')); ?>">
@@ -37,7 +35,13 @@ if (isset($block['data']['preview_image_help'])) {
                             continue;
                         }
                     ?>
-                        <a href="<?php echo !empty($link) ? esc_url($link['url']) : '#'; ?>" class="expertise-card">
+
+                        <?php if (!empty($link)) : ?>
+                            <a href="<?php echo esc_url($link['url']); ?>" class="expertise-card">
+                        <?php else : ?>
+                            <div class="expertise-card">
+                        <?php endif; ?>
+
                             <div class="card-inner">
                                 <div class="card-top">
                                     <?php if (!empty($icon)) : ?>
@@ -58,13 +62,18 @@ if (isset($block['data']['preview_image_help'])) {
 
                                 <div class="card-bottom">
                                     <h3><?php echo esc_html($card_title); ?></h3>
-
                                     <?php if (!empty($description)) : ?>
                                         <?php echo wp_kses_post($description); ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
-                        </a>
+
+                        <?php if (!empty($link)) : ?>
+                            </a>
+                        <?php else : ?>
+                            </div>
+                        <?php endif; ?>
+
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

@@ -27,22 +27,28 @@
 .content-column {
   max-width: 770px;
 }
-.content-section-title-font {
+
+.content-section-content-font,
+.image-content-wrap .content-column p {
+  font-size: var(--fs-xl);
+}
+.image-content-wrap .content-column p a{
+  font-size: var(--fs-base);
+}
+.content-section-content-font + p,
+.image-content-wrap .content-column p + p {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.image-content-wrap .content-column p.content-section-title-font {
   font-family: var(--font-heading);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-2xl);
   line-height: var(--lh-heading);
   max-width: 640px;
   margin-bottom: 32px;
-}
-.content-section-content-font {
-  font-size: var(--fs-xl);
-}
-.content-section-content-font + p {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
 }
 
 .image-content-about-section {

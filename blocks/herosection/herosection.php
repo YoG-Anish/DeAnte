@@ -6,13 +6,15 @@ if (isset($block['data']['preview_image_help'])) {
     $heading      = get_field('heading');
     $banner_image = get_field('banner_image');
 
-    // pull child pages under "Services"
-    $services_parent = get_page_by_path('expertise');
-    $services         = [];
 
-    if ($services_parent) {
+
+    $services_page_url  = get_field('services_list_page'); 
+    $services_parent_id = url_to_postid($services_page_url);
+
+    $services = [];
+    if (!empty($services_parent_id)) {
         $services = get_pages([
-            'child_of'    => $services_parent->ID,
+            'child_of'    => $services_parent_id,
             'sort_column' => 'menu_order',
             'sort_order'  => 'ASC',
         ]);
