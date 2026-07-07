@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "row",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -72,6 +72,24 @@
                     "media_upload": 1,
                     "delay": 0,
                     "parent_repeater": "field_6a44eb8f4cdc6"
+                },
+                {
+                    "key": "field_6a44ec654cdcb",
+                    "label": "Button LInk",
+                    "name": "button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_6a44eb8f4cdc6"
                 }
             ]
         },
@@ -97,11 +115,11 @@
             "append": ""
         },
         {
-            "key": "field_6a44ec654cdcb",
-            "label": "Button LInk",
-            "name": "button_link",
+            "key": "field_6a4c75339f123",
+            "label": "Image Size",
+            "name": "image_size",
             "aria-label": "",
-            "type": "link",
+            "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -110,13 +128,20 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "allow_in_bindings": 0
+            "choices": {
+                "small": "Small",
+                "big": "Big"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
         },
         {
-            "key": "field_6a45df379bb82",
-            "label": "Is Home",
-            "name": "is_home",
+            "key": "field_6a4c77ea52f32",
+            "label": "Contact Popup?",
+            "name": "contact_popup",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -127,7 +152,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
+            "message": "Use this if you want to add a popup contact instead of the button link.",
             "default_value": 1,
             "allow_in_bindings": 0,
             "ui_on_text": "",
@@ -156,5 +181,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782966213
+    "modified": 1783405947
 }

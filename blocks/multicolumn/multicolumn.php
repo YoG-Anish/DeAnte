@@ -3,7 +3,7 @@ if (isset($block['data']['preview_image_help'])) {
     echo '<img src="' . get_template_directory_uri() . $block['data']['preview_image_help'] . '" style="width:100%; height:auto;">';
 } else {
     $section_title       = get_field('title');
-    $section_description = get_field('description');
+    $section_description = get_field('content');
     $grid_type            = get_field('choose_grid_layout'); // grid_3 / grid_4
     $use_small_icon       = get_field('icon_size_and_layout');
     $items                = get_field('items');
@@ -28,7 +28,7 @@ if (isset($block['data']['preview_image_help'])) {
                     <?php foreach ($items as $item) :
                         $icon        = $item['icon'];
                         $card_title  = $item['title'];
-                        $description = $item['description'];
+                        $description = $item['content'];
                         $link        = $item['page_linked_to'];
 
                         if (empty($card_title)) {

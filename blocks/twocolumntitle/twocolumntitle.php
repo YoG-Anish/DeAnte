@@ -22,9 +22,9 @@ if (isset($block['data']['preview_image_help'])) {
                 <?php endif; ?>
 
                 <?php if (!empty($content)) : ?>
-                    <h1 class="inner-banner-heading">
+                    <div class="wysiwyg-content">
                         <?php echo wp_kses_post($content); ?>
-                    </h1>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (!empty($project_details)) : ?>

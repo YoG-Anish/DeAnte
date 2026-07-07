@@ -25,10 +25,10 @@
         },
         {
             "key": "field_6a44df7782a0b",
-            "label": "Image",
-            "name": "image",
+            "label": "Media",
+            "name": "media",
             "aria-label": "",
-            "type": "image",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,15 +39,10 @@
             },
             "return_format": "array",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "allow_in_bindings": 0
         },
         {
             "key": "field_6a44dfb282a0c",
@@ -72,8 +67,8 @@
         },
         {
             "key": "field_6a44dfb782a0d",
-            "label": "Description",
-            "name": "description",
+            "label": "Content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -155,5 +150,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782984209
+    "modified": 1783400680
 }

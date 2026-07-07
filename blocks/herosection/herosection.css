@@ -18,6 +18,11 @@
 .hero-section .right-pane .image-container {
   height: 100%;
 }
+@media(min-width:1440px){
+	.hero-section .right-pane .image-container {
+	  max-height: 800px;
+	}
+}
 .hero-section .right-pane .image-container :is(img, video) {
   height: calc(100% - 80px);
   width: 100%;

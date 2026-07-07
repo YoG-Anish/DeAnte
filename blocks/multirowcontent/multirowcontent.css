@@ -65,13 +65,15 @@
     max-width: 360px;
     width: 100%;
   }
-  .content-section-title-font {
-    font-size: var(--fs-lg);
-  }
+  
   .image-content-wrap,
-  .content-section-content-font + p {
+  .content-section-content-font + p,
+	.image-content-wrap .content-column p + p{
     flex-direction: column;
     align-items: flex-start;
+  }
+	.image-content-wrap .content-column p.content-section-title-font {
+    font-size: var(--fs-lg);
   }
   .image-content-wrap.image-content-wrap-home {
     gap: 60px;

@@ -74,14 +74,17 @@
                 </svg>
             </button>
 
-            <h2 class="modal-title">Get in touch</h2>
+            <?php
+            $content = get_field('content', 'option');
+            if ($content) {
+               echo '<div class="modal-text">' . wp_kses_post($content) . '</div>';
+            }
+            
+            $email = get_field('email', 'option');
+            if ($email) {
+            ?>
 
-            <p class="modal-text">
-                Great solutions begin with a great conversation, so if you’re ready to
-                get started, let’s talk.
-            </p>
-
-            <a href="mailto:Hello@deante.co" class="modal-btn">
+            <a href="mailto:<?php echo $email?>" class="modal-btn">
                 <svg
                     width="24"
                     height="24"
@@ -95,8 +98,9 @@
                         d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <span>Hello@deante.co</span>
+                <span><?php echo $email; ?></span>
             </a>
+            <?php } ?>
         </div>
     </div>
     <div class="sidebar-overlay" id="sidebarMenu">
@@ -115,26 +119,11 @@
             </button>
 
             <nav class="sidebar-nav">
-                <a href="#about" class="nav-main-link">About</a>
-
-                <div class="expertise-group">
-                    <h3 class="nav-heading"><a href="#expertise">Expertise</a></h3>
-                    <ul class="sub-nav-links">
-                        <li><a href="#">/ Product Strategy</a></li>
-                        <li><a href="#">/ Digital Design (UX/UI)</a></li>
-                        <li><a href="#">/ eCRM</a></li>
-                        <li><a href="#">/ Digital Branding</a></li>
-                        <li><a href="#">/ Development</a></li>
-                        <li><a href="#">/ SEO</a></li>
-                        <li><a href="#">/ Data Dashboard</a></li>
-                    </ul>
-                </div>
-
-                <a href="#case-studies" class="nav-main-link">Case studies</a>
+                <?php 
+                wp_nav_menu(array(
+                    'theme_location' => 'sidebar-menu',
+                ));
+                ?>
             </nav>
-
-            <button class="sidebar-btn btn-modal-sidebar-contact">
-                Get in touch
-            </button>
         </div>
     </div>

@@ -19,10 +19,9 @@ add_filter( 'block_categories_all', function( $categories ) {
     ]);
     return $categories;
 });
-
-// functions.php
+// Shared render function — used by both initial page load and AJAX
 function render_case_study_card($case) {
-    $media_type  = get_field('media_type', $case->ID); // yt / mp4
+    $media_type  = get_field('media_type', $case->ID);
     $youtube_id  = get_field('youtube_id', $case->ID);
     $mp4_file    = get_field('mp4_file', $case->ID);
     $client_name = get_field('client_name', $case->ID);
@@ -44,7 +43,7 @@ function render_case_study_card($case) {
                 <video autoplay muted loop playsinline>
                     <source src="<?php echo esc_url($mp4_file['url']); ?>" type="video/mp4">
                 </video>
-            <?php elseif ($show_image) : ?>
+            <?php else: ?>
                 <?php echo get_the_post_thumbnail($case->ID, 'large', ['alt' => 'Project Image']); ?>
             <?php endif; ?>
         </div>
@@ -82,37 +81,3 @@ function render_case_study_card($case) {
     <?php
     return ob_get_clean();
 }
-function ajax_filter_case_studies() {
-    $filter = isset($_POST['filter']) ? sanitize_text_field($_POST['filter']) : 'all';
-
-    $args = [
-        'post_type'      => 'case-study',
-        'posts_per_page' => -1,
-    ];
-
-    if ($filter !== 'all') {
-        $args['tax_query'] = [[
-            'taxonomy' => 'services-category',
-            'field'    => 'slug',
-            'terms'    => $filter,
-        ]];
-    }
-
-    $query = new WP_Query($args);
-    $html  = '';
-
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            $html .= render_case_study_card(get_post());
-        }
-        wp_reset_postdata();
-    } else {
-        $html = '<p class="no-results">No case studies found.</p>';
-    }
-
-    echo $html;
-    wp_die();
-}
-add_action('wp_ajax_filter_case_studies', 'ajax_filter_case_studies');
-add_action('wp_ajax_nopriv_filter_case_studies', 'ajax_filter_case_studies');

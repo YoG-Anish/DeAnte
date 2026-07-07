@@ -3,8 +3,8 @@ if (isset($block['data']['preview_image_help'])) {
     echo '<img src="' . get_template_directory_uri() . $block['data']['preview_image_help'] . '" style="width:100%; height:auto;">';
 } else {
     $title           = get_field('title');
-    $description     = get_field('description');
-    $image           = get_field('image');
+    $description     = get_field('content');
+    $media           = get_field('media'); // File field - accepts image or video
     $column_reverse  = get_field('column_reverse');
     $content_center  = get_field('content_center');
 
@@ -31,11 +31,20 @@ if (isset($block['data']['preview_image_help'])) {
                         <?php echo wp_kses_post($description); ?>
                     <?php endif; ?>
                 </div>
+                <?php
+                $is_image = !empty($media) && strpos($media['mime_type'], 'image') !== false;
+                $is_video = !empty($media) && strpos($media['mime_type'], 'video') !== false;
 
-                <?php if (!empty($image)) : ?>
+                if ($is_image || $is_video) : ?>
                     <div class="split-media">
                         <div class="media-inner">
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php if ($is_image) : ?>
+                                <img src="<?php echo esc_url($media['url']); ?>" alt="<?php echo esc_attr($media['title']); ?>" />
+                            <?php elseif ($is_video) : ?>
+                                <video autoplay muted loop playsinline>
+                                    <source src="<?php echo esc_url($media['url']); ?>" type="<?php echo esc_attr($media['mime_type']); ?>">
+                                </video>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>

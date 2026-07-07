@@ -1,0 +1,154 @@
+@import url("https://fonts.cdnfonts.com/css/ibm-plex-serif");
+@import url("https://fonts.cdnfonts.com/css/dm-sans");
+:root {
+  /* Colors */
+  --color-primary: #92d5b2;
+  --color-white: #ffffff;
+
+  /* Fonts */
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "IBM Plex Serif", sans-serif;
+
+  /* Font Sizes */
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-mlg: 20px;
+  --fs-lg: 28px;
+  --fs-xl: 24px;
+  --fs-2xl: 32px;
+  --fs-3xl: 40px;
+  --fs-4xl: 46px;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-regularbold: 500;
+  --fw-semibold: 600;
+
+  /* Line Height */
+  --lh-normal: 1.6;
+  --lh-heading: 1.4;
+}
+
+.hero-heading {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-4xl);
+  max-width: 567px;
+  margin-bottom: 24px;
+  letter-spacing: -2%;
+}
+
+.inner-banner-heading {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-3xl);
+  letter-spacing: -2%;
+  max-width: 780px;
+}
+
+.inner-banner-label {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regularbold);
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.content-section-title-font {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+  max-width: 638px;
+  margin-bottom: 32px;
+}
+.content-section-content-font {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  font-size: var(--fs-xl);
+}
+
+.split-title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  font-size: var(--fs-3xl);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-lg);
+  color: var(--color-primary);
+  letter-spacing: -2%;
+}
+
+.single-content-heading {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-lg);
+  letter-spacing: -2%;
+}
+.single-content-text {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  font-size: var(--fs-mlg);
+  margin-top: 24px;
+}
+.checkmark-list li,
+li.checkmark-list {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  font-size: var(--fs-md);
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.checkmark-list li::before,
+li.checkmark-list::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 8px;
+  border-left: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  transform: rotate(-45deg);
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.bold-text {
+  font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 767px) {
+  .inner-banner-heading {
+    font-size: var(--fs-lg);
+  }
+  .hero-heading {
+    font-size: var(--fs-lg);
+    max-width: 360px;
+  }
+  .split-title {
+    font-size: var(--fs-2xl);
+  }
+  .content-section-title-font {
+    font-size: var(--fs-lg);
+  }
+}

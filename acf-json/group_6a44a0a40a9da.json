@@ -25,8 +25,8 @@
         },
         {
             "key": "field_6a4776a0a1433",
-            "label": "Description",
-            "name": "description",
+            "label": "Content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -117,8 +117,8 @@
                 },
                 {
                     "key": "field_6a44c75da4a78",
-                    "label": "Description",
-                    "name": "description",
+                    "label": "Content",
+                    "name": "content",
                     "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -245,5 +245,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783068900
+    "modified": 1783400228
 }

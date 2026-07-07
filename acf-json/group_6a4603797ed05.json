@@ -30,8 +30,8 @@
         },
         {
             "key": "field_6a46039b2a584",
-            "label": "Heading",
-            "name": "heading",
+            "label": "Content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -51,10 +51,10 @@
         },
         {
             "key": "field_6a4603aa2a585",
-            "label": "Banner Image",
-            "name": "banner_image",
+            "label": "Banner",
+            "name": "banner",
             "aria-label": "",
-            "type": "image",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -65,15 +65,10 @@
             },
             "return_format": "array",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "allow_in_bindings": 0
         },
         {
             "key": "field_6a479149e9dca",
@@ -142,5 +137,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783316664
+    "modified": 1783398916
 }
